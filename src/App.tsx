@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Droplets, ArrowRight, Mail, Phone } from 'lucide-react';
+import { Droplets, ArrowRight, Mail, Phone, Menu, X } from 'lucide-react';
 import EventDetail from './components/EventDetail';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   const scrollToSection = (id: string) => {
+    setIsMenuOpen(false);
     if (location.pathname !== '/') {
       window.location.href = `/#${id}`;
     } else {
       const element = document.getElementById(id);
       element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const goToHome = () => {
+    setIsMenuOpen(false);
+    if (location.pathname !== '/') {
+      window.location.href = '/';
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -77,11 +89,16 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
-              <div className="flex items-center space-x-2">
+              <button
+                onClick={goToHome}
+                className="flex items-center space-x-2 focus:outline-none"
+              >
                 <Droplets className="h-8 w-8 text-blue-600" />
                 <span className="text-xl font-bold text-blue-600">AquaAlert</span>
-              </div>
+              </button>
             </div>
+            
+            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               {['about', 'events', 'shor', 'partners', 'contact'].map((section) => (
                 <button
@@ -97,7 +114,47 @@ function App() {
                 </button>
               ))}
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-600 hover:text-blue-600 focus:outline-none p-2"
+              >
+                {isMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden border-t border-gray-200"
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {['about', 'events', 'shor', 'partners', 'contact'].map((section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className="block w-full text-left px-3 py-2 text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200"
+                  >
+                    {section === 'about' && 'Hakkımızda'}
+                    {section === 'events' && 'Etkinlikler'}
+                    {section === 'shor' && 'SHOR Projesi'}
+                    {section === 'partners' && 'Paydaşlarımız'}
+                    {section === 'contact' && 'İletişim'}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
       </nav>
 
@@ -176,7 +233,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Etkinlikler</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {events.map((event) => (
                 <motion.div
                   key={event.id}
@@ -216,7 +273,7 @@ function App() {
                 <img
                   src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
                   alt="SHOR Project"
-                  className="rounded-lg shadow-lg"
+                  className="rounded-lg shadow-lg w-full"
                 />
               </div>
               <div>
@@ -268,7 +325,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Paydaşlarımız</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => (
                 <div
                   key={index}
@@ -308,11 +365,21 @@ function App() {
                     <div className="mt-2 space-y-2">
                       <div className="flex items-center text-gray-600">
                         <Mail className="h-5 w-5 mr-2" />
-                        <span>{contact.email}</span>
+                        <a
+                          href={`mailto:${contact.email}`}
+                          className="hover:text-blue-600 transition-colors"
+                        >
+                          {contact.email}
+                        </a>
                       </div>
                       <div className="flex items-center text-gray-600">
                         <Phone className="h-5 w-5 mr-2" />
-                        <span>{contact.phone}</span>
+                        <a
+                          href={`tel:${contact.phone}`}
+                          className="hover:text-blue-600 transition-colors"
+                        >
+                          {contact.phone}
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -326,29 +393,15 @@ function App() {
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center space-x-2">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <button
+              onClick={goToHome}
+              className="flex items-center space-x-2 mb-4 md:mb-0 focus:outline-none"
+            >
               <Droplets className="h-8 w-8" />
               <span className="text-xl font-bold">AquaAlert</span>
-            </div>
-            <div className="flex flex-col space-y-2">
-              <button onClick={() => scrollToSection('about')} className="text-blue-200 hover:text-white transition-colors text-left">
-                Hakkımızda
-              </button>
-              <button onClick={() => scrollToSection('events')} className="text-blue-200 hover:text-white transition-colors text-left">
-                Etkinlikler
-              </button>
-              <button onClick={() => scrollToSection('shor')} className="text-blue-200 hover:text-white transition-colors text-left">
-                SHOR Projesi
-              </button>
-              <button onClick={() => scrollToSection('partners')} className="text-blue-200 hover:text-white transition-colors text-left">
-                Paydaşlarımız
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="text-blue-200 hover:text-white transition-colors text-left">
-                İletişim
-              </button>
-            </div>
-            <div className="text-right">
+            </button>
+            <div className="text-center md:text-right">
               <p className="text-blue-200 text-sm">
                 &copy; {new Date().getFullYear()} AquaAlert. Tüm hakları saklıdır.
               </p>

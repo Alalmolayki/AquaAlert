@@ -36,7 +36,7 @@ const EventDetail: React.FC<EventDetailProps> = ({ events }) => {
     return <div>Event not found</div>;
   }
 
-  const images = event.images.map(image => ({
+  const images = event.images.slice(0, 5).map(image => ({
     ...image,
     customOverlay: (
       <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2">
