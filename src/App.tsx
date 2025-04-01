@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Droplets, ArrowRight, Mail, Phone, Menu, X, GraduationCap } from 'lucide-react';
 import EventDetail from './components/EventDetail';
-import logo1 from "/public/images/School_logos/logo7.png";
+import sch_2 from "/public/images/School_logos/logo7.png";
 import logo2 from "/public/images/School_logos/logo6.png";
 import sch_1 from "/public/images/School_logos/logo1.png";
 import e1_1 from "/public/images/Events/e1_1.jpg"; import e1_2 from "/public/images/Events/e1_2.jpg"; import e1_3 from "/public/images/Events/e1_3.jpg"; import e1_4 from "/public/images/Events/e1_4.jpg"; import e1_5 from "/public/images/Events/e1_5.jpg";
@@ -166,7 +166,7 @@ function App() {
       date: '08 Ocak 2025',
       image: e3_1,
       description: "Yeni etkinliğimizde İstanbul Büyükşehir Belediyesi İSTAÇ Sütlüce Deniz Hizmetlerine bağlı Haliç tesisinde Haliç'in temizlenmesinde kullanılan makine ve cihazları görüp yetkililerden bilgi aldık. 13 temizlik  teknesinin görev yaptığı birimde günlük ortalama 20-30 m3 ( 2,5 – 3 ton ) atık denizden çıkarıldığını öğrendik. Çoğunlukla plastik atıkların toplandığını belirten görevliler vatandaşlarımızın denizlerimizi koruma adına daha duyarlı olması gerektiğini belirtti.",
-      logo: logo1,
+      logo: sch_2,
       images: [
         {
           src: e3_1, 
@@ -206,7 +206,7 @@ function App() {
       date: '24 Şubat 2025',
       image: e5_1,
       description: "Yeni etkinliğimizde İstanbul Büyükşehir Belediyesi İSTAÇ Sütlüce Deniz Hizmetlerine bağlı Haliç tesisinde Haliç'in temizlenmesinde kullanılan makine ve cihazları görüp yetkililerden bilgi aldık. 13 temizlik  teknesinin görev yaptığı birimde günlük ortalama 20-30 m3 ( 2,5 – 3 ton ) atık denizden çıkarıldığını öğrendik. Çoğunlukla plastik atıkların toplandığını belirten görevliler vatandaşlarımızın denizlerimizi koruma adına daha duyarlı olması gerektiğini belirtti.",
-      logo: logo1,
+      logo: sch_2,
       images: [
         {
           src: e5_1, 
@@ -246,7 +246,7 @@ function App() {
       date: '26 Şubat 2025',
       image: e1_1,
       description: 'Yeni etkinliğimizi Yıldız Teknik Üniversitesi Çevre Mühendisliği bölümünden araştırma  görevlisi Dr. Umut METİN ile yaptık. Deniz sularının içinde yaşayan mikroorganizmaları mikroskop ile görmeye çalıştık. Ayrıca Dr. Umut METİN bizlere denizlerdeki kirliliklerin nasıl meydana geldiğini anlattı.',
-      logo: logo1,
+      logo: sch_2,
       images: [
         {
           src: e1_1, 
