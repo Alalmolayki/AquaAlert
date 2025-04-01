@@ -18,6 +18,7 @@ interface Event {
   date: string;
   image: string;
   description: string;
+  logo?: string;
   images: Image[];
 }
 
@@ -48,19 +49,39 @@ const EventDetail: React.FC<EventDetailProps> = ({ events }) => {
   return (
     <div className="min-h-screen bg-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <button
-          onClick={() => navigate('/')}
-          className="flex items-center text-blue-600 hover:text-blue-500 mb-8"
-        >
-          <ArrowLeft className="h-5 w-5 mr-2" />
-          Geri Dön
-        </button>
+        <div className="flex justify-between items-center mb-8">
+          <button
+            onClick={() => navigate('/')}
+            className="flex items-center text-blue-600 hover:text-blue-500"
+          >
+            <ArrowLeft className="h-5 w-5 mr-2" />
+            Geri Dön
+          </button>
+          
+          
+        </div>
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">{event.title}</h1>
-        <p className="text-blue-600 mb-4">{event.date}</p>
-        <p className="text-gray-600 mb-8">{event.description}</p>
+        {/* Event Logo */}
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8">
+          {event.logo && (
+            <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 overflow-hidden rounded-lg shadow-md">
+              <img 
+                src={event.logo} 
+                alt={`${event.title} Logo`} 
+                className="w-full h-full object-cover "
+                style={{ transform: "scale(4)", transformOrigin: "center" }}
+              />
+            </div>  
+          )}
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">{event.title}</h1>
+            <p className="text-blue-600 mb-4">{event.date}</p>
+            <p className="text-gray-600">{event.description}</p>
+          </div>
+        </div>
 
         <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Etkinlik Fotoğrafları</h2>
           <Gallery
             images={images}
             onClick={(index) => setIndex(index)}
