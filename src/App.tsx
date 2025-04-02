@@ -7,7 +7,7 @@ import EventDetail from './components/EventDetail';
 // import sch_2 from "/public/images/School_logos/logo7.png";
 // const sch_2 = "/public/images/School_logos/logo7.png";
 // import logo2 from "/public/images/School_logos/logo6.png";
-import sch_1 from "/public/images/School_logos/logo1.png";
+// import sch_1 from "/public/images/School_logos/logo1.png";
 import e1_1 from "/public/images/Events/e1_1.jpg"; import e1_2 from "/public/images/Events/e1_2.jpg"; import e1_3 from "/public/images/Events/e1_3.jpg"; import e1_4 from "/public/images/Events/e1_4.jpg"; import e1_5 from "/public/images/Events/e1_5.jpg";
 import e2_1 from "/public/images/Events/e2_1.jpg"; import e2_2 from "/public/images/Events/e2_2.jpg"; import e2_3 from "/public/images/Events/e2_3.jpg"; import e2_4 from "/public/images/Events/e2_4.jpg"; import e2_5 from "/public/images/Events/e2_5.jpg";
 import e3_1 from "/public/images/Events/e3_1.jpg"; import e3_2 from "/public/images/Events/e3_2.jpg"; import e3_3 from "/public/images/Events/e3_3.jpg"; import e3_4 from "/public/images/Events/e3_4.jpg"; import e3_5 from "/public/images/Events/e3_5.jpg";
@@ -321,7 +321,7 @@ function App() {
             <div className="hidden md:flex items-center">
               <div className="flex items-center space-x-2">
                 <GraduationCap className="h-6 w-6 text-blue-600" />
-                <span className="text-sm font-medium text-gray-600"><img src={sch_1} alt="" /></span>
+                <span className="text-sm font-medium text-gray-600"><img src="/public/images/School_logos/logo1.png" alt="" /></span>
               </div>
             </div>
             
@@ -373,7 +373,7 @@ function App() {
                   {/* School Logo for Mobile */}
                   <div className="flex items-center space-x-2 px-3 py-2">
                     <GraduationCap className="h-5 w-5 text-blue-600" />
-                    <span className="text-sm font-medium text-gray-600"><img src={sch_1} alt="" /></span>
+                    <span className="text-sm font-medium text-gray-600"><img src="/public/images/School_logos/logo1.png" alt="" /></span>
                   </div>
                   
                   {['about', 'events', 'shore', 'partners', 'contact'].map((section) => (
