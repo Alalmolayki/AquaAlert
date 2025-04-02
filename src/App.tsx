@@ -533,7 +533,7 @@ function App() {
             <div style={{ display: 'flex' }}>
             
               <img src={shore_logo1} style={{ marginBottom: "20px", marginRight: "10px" }} height="5px" width="250px" alt="" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-8" style={{ marginTop: "13px" , fontSize: "45px"}}>Projesi</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8" style={{ marginTop: "13px" , fontSize: "40px"}}>Projesi</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
