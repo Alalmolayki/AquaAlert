@@ -42,7 +42,7 @@ function App() {
 
   const events = [
     {
-      id: '1',
+      id: 'okuryazarlik',
       title: 'Deniz Okuryazarlığını Bir Belgeselle Tanıttık.',
       date: '16 Ekim 2024',
       image: e6_1,
