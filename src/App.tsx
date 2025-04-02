@@ -4,10 +4,9 @@ import { MapPin, Globe } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Droplets, ArrowRight, Mail, Phone, Menu, X, GraduationCap } from 'lucide-react';
 import EventDetail from './components/EventDetail';
-// import sch_2 from "/public/images/School_logos/logo7.png";
-// const sch_2 = "/public/images/School_logos/logo7.png";
-// import logo2 from "/public/images/School_logos/logo6.png";
-// import sch_1 from "/public/images/School_logos/logo1.png";
+import sch_2 from "/public/images/school_logo/logo7.png";
+import logo2 from "/public/images/school_logo/logo6.png";
+import sch_1 from "/public/images/school_logo/logo1.png";
 import e1_1 from "/public/images/Events/e1_1.jpg"; import e1_2 from "/public/images/Events/e1_2.jpg"; import e1_3 from "/public/images/Events/e1_3.jpg"; import e1_4 from "/public/images/Events/e1_4.jpg"; import e1_5 from "/public/images/Events/e1_5.jpg";
 import e2_1 from "/public/images/Events/e2_1.jpg"; import e2_2 from "/public/images/Events/e2_2.jpg"; import e2_3 from "/public/images/Events/e2_3.jpg"; import e2_4 from "/public/images/Events/e2_4.jpg"; import e2_5 from "/public/images/Events/e2_5.jpg";
 import e3_1 from "/public/images/Events/e3_1.jpg"; import e3_2 from "/public/images/Events/e3_2.jpg"; import e3_3 from "/public/images/Events/e3_3.jpg"; import e3_4 from "/public/images/Events/e3_4.jpg"; import e3_5 from "/public/images/Events/e3_5.jpg";
@@ -48,7 +47,7 @@ function App() {
       date: '16 Ekim 2024',
       image: e6_1,
       description: "Yeni etkinliğimizle projemizi okulumuzun sınırları dışına taşıyoruz. Fatih Sultan Mehmet İlkokulu'nu davet ettiğimiz etkinliğimizde deniz kirliliğine yapay zeka ile savaş açtık. Öğrencilerimiz, Fatih Sultan Mehmet İlkokulu öğrencilerine, deniz canlılarını, kirletici maddelerden nasıl ayıracağını eğlenceli bir oyunla yapay zeka kullanarak öğretti.",
-      logo: "/public/images/School_logos/logo7.png",
+      logo: sch_2,
       images: [
         {
           src: e6_1, 
@@ -88,7 +87,7 @@ function App() {
       date: '27 Kasım 2024',
       image: e4_1,
       description: "Yeni etkinliğimizle projemizi okulumuzun sınırları dışına taşıyoruz. Fatih Sultan Mehmet İlkokulu'nu davet ettiğimiz etkinliğimizde deniz kirliliğine yapay zeka ile savaş açtık. Öğrencilerimiz, Fatih Sultan Mehmet İlkokulu öğrencilerine, deniz canlılarını, kirletici maddelerden nasıl ayıracağını eğlenceli bir oyunla yapay zeka kullanarak öğretti.",
-      logo: "/public/images/School_logos/logo7.png",
+      logo: logo2,
       images: [
         {
           src: e4_1, 
@@ -128,7 +127,7 @@ function App() {
       date: '11 Aralık 2024',
       image: e2_1,
       description: 'Bahçelievler Belediyesi tarafından Bahçelievler Kongre Merkezi’nde oluşturulan  Sıfır Atık Akademisi’nde öğrencilerimiz sıfır atık konusunda akademide görevli çevre mühendisi ve makine mühendisleri tarafından okyanus kirliliği ve yenilenebilir enerji konusunda bilgilendirildi.',
-      logo: "/public/images/School_logos/logo7.png",
+      logo: sch_2,
       images: [
         {
           src: e2_1, 
@@ -168,7 +167,7 @@ function App() {
       date: '08 Ocak 2025',
       image: e3_1,
       description: "Yeni etkinliğimizde İstanbul Büyükşehir Belediyesi İSTAÇ Sütlüce Deniz Hizmetlerine bağlı Haliç tesisinde Haliç'in temizlenmesinde kullanılan makine ve cihazları görüp yetkililerden bilgi aldık. 13 temizlik  teknesinin görev yaptığı birimde günlük ortalama 20-30 m3 ( 2,5 – 3 ton ) atık denizden çıkarıldığını öğrendik. Çoğunlukla plastik atıkların toplandığını belirten görevliler vatandaşlarımızın denizlerimizi koruma adına daha duyarlı olması gerektiğini belirtti.",
-      logo: "/public/images/School_logos/logo7.png",
+      logo: logo2,
       images: [
         {
           src: e3_1, 
@@ -208,7 +207,7 @@ function App() {
       date: '24 Şubat 2025',
       image: e5_1,
       description: "Yeni etkinliğimizde İstanbul Büyükşehir Belediyesi İSTAÇ Sütlüce Deniz Hizmetlerine bağlı Haliç tesisinde Haliç'in temizlenmesinde kullanılan makine ve cihazları görüp yetkililerden bilgi aldık. 13 temizlik  teknesinin görev yaptığı birimde günlük ortalama 20-30 m3 ( 2,5 – 3 ton ) atık denizden çıkarıldığını öğrendik. Çoğunlukla plastik atıkların toplandığını belirten görevliler vatandaşlarımızın denizlerimizi koruma adına daha duyarlı olması gerektiğini belirtti.",
-      logo: "/public/images/School_logos/logo7.png",
+      logo: sch_2,
       images: [
         {
           src: e5_1, 
@@ -248,7 +247,7 @@ function App() {
       date: '26 Şubat 2025',
       image: e1_1,
       description: 'Yeni etkinliğimizi Yıldız Teknik Üniversitesi Çevre Mühendisliği bölümünden araştırma  görevlisi Dr. Umut METİN ile yaptık. Deniz sularının içinde yaşayan mikroorganizmaları mikroskop ile görmeye çalıştık. Ayrıca Dr. Umut METİN bizlere denizlerdeki kirliliklerin nasıl meydana geldiğini anlattı.',
-      logo: "/public/images/School_logos/logo7.png",
+      logo: logo2,
       images: [
         {
           src: e1_1, 
@@ -321,7 +320,7 @@ function App() {
             <div className="hidden md:flex items-center">
               <div className="flex items-center space-x-2">
                 <GraduationCap className="h-6 w-6 text-blue-600" />
-                <span className="text-sm font-medium text-gray-600"><img src="/public/images/School_logos/logo1.png" alt="" /></span>
+                <span className="text-sm font-medium text-gray-600"><img src={sch_1}alt="" /></span>
               </div>
             </div>
             
@@ -373,7 +372,7 @@ function App() {
                   {/* School Logo for Mobile */}
                   <div className="flex items-center space-x-2 px-3 py-2">
                     <GraduationCap className="h-5 w-5 text-blue-600" />
-                    <span className="text-sm font-medium text-gray-600"><img src="/public/images/School_logos/logo1.png" alt="" /></span>
+                    <span className="text-sm font-medium text-gray-600"><img src={sch_1} alt="" /></span>
                   </div>
                   
                   {['about', 'events', 'shore', 'partners', 'contact'].map((section) => (
@@ -533,7 +532,7 @@ function App() {
             <div style={{ display: 'flex' }}>
             
               <img src={shore_logo1} style={{ marginBottom: "20px", marginRight: "10px" }} height="5px" width="250px" alt="" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-8" style={{ marginTop: "13px" , fontSize: "40px"}}>Projesi</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8" style={{ marginTop: "13px" , fontSize: "39px"}}>Projesi</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
