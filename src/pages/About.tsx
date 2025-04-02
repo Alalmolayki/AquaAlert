@@ -13,7 +13,7 @@ const About = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Hakkımızda</h1>
           <div className="prose max-w-none">
             <p className="text-xl text-gray-600 mb-6">
-              AquaAlert, denizlerimizi korumak ve deniz kirliliğine karşı farkındalık yaratmak amacıyla kurulmuş bir girişimdir.
+              Bahçelievler 15 Temmuz Şehitleri İmam Hatip Ortaokulu, sınavla öğrenci alan proje ortaokuludur. İlk senesinde yabancı hocaların desteğiyle Yoğunlaştırılmış İngilizce eğitimi vermektedir. 15 Temmuz Şehitleri AİHL ile aynı kampüs içerisinde olup ortak çalışmalar yürütmektedir. SHORE projesiyle öğrencilerine su okur yazarlığı öğretmeyi ve suyun önemini aşılamaya çalışmış olan okulumuz bu kapsamda 11 etkinlik yürütmüştür.
             </p>
             {/* Content will be added in the next iteration */}
           </div>

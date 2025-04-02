@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { MapPin, Globe } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Droplets, ArrowRight, Mail, Phone, Menu, X, GraduationCap } from 'lucide-react';
 import EventDetail from './components/EventDetail';
 // import sch_2 from "/public/images/School_logos/logo7.png";
-const sch_2 = "images/School_logos/logo7.png";
-import logo2 from "/public/images/School_logos/logo6.png";
+// const sch_2 = "/public/images/School_logos/logo7.png";
+// import logo2 from "/public/images/School_logos/logo6.png";
 import sch_1 from "/public/images/School_logos/logo1.png";
 import e1_1 from "/public/images/Events/e1_1.jpg"; import e1_2 from "/public/images/Events/e1_2.jpg"; import e1_3 from "/public/images/Events/e1_3.jpg"; import e1_4 from "/public/images/Events/e1_4.jpg"; import e1_5 from "/public/images/Events/e1_5.jpg";
 import e2_1 from "/public/images/Events/e2_1.jpg"; import e2_2 from "/public/images/Events/e2_2.jpg"; import e2_3 from "/public/images/Events/e2_3.jpg"; import e2_4 from "/public/images/Events/e2_4.jpg"; import e2_5 from "/public/images/Events/e2_5.jpg";
@@ -14,8 +15,8 @@ import e4_1 from "/public/images/Events/e4_1.jpg"; import e4_2 from "/public/ima
 import e5_1 from "/public/images/Events/e5_1.jpg"; import e5_2 from "/public/images/Events/e5_2.jpg"; import e5_3 from "/public/images/Events/e5_3.jpg"; import e5_4 from "/public/images/Events/e5_4.jpg"; import e5_5 from "/public/images/Events/e5_5.jpg";
 import e6_1 from "/public/images/Events/e6_1.jpg"; import e6_2 from "/public/images/Events/e6_2.jpg"; import e6_3 from "/public/images/Events/e6_3.jpg"; import e6_4 from "/public/images/Events/e6_4.jpg"; import e6_5 from "/public/images/Events/e6_5.jpg";
 import img1 from "/public/images/SHORE/img1.jpg"; import shore_logo1 from "/public/images/SHORE/logo1.jpg";
-import spon_logo1 from "/public/images/Logos/ytu.png"; import spon_logo2 from "/public/images/Logos/gop_bilsem.png"; import spon_logo3 from "/public/images/Logos/istac.png"; import spon_logo4 from "/public/images/Logos/bahcelievler.png";
-import video from "/public/images/SHORE/video.mp4";
+import spon_logo1 from "/public/images/Logos/ytu.png"; import spon_logo2 from "/public/images/Logos/gop_bilsem.png"; import spon_logo3 from "/public/images/Logos/istac.png"; import spon_logo4 from "/public/images/Logos/bahcelievler.png"; import europe from "/public/images/Logos/europe.jpg";
+import video from "/public/images/SHORE/video.mp4";import europe2 from "/public/images/Logos/europe2.jpg";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ function App() {
       date: '16 Ekim 2024',
       image: e6_1,
       description: "Yeni etkinliğimizle projemizi okulumuzun sınırları dışına taşıyoruz. Fatih Sultan Mehmet İlkokulu'nu davet ettiğimiz etkinliğimizde deniz kirliliğine yapay zeka ile savaş açtık. Öğrencilerimiz, Fatih Sultan Mehmet İlkokulu öğrencilerine, deniz canlılarını, kirletici maddelerden nasıl ayıracağını eğlenceli bir oyunla yapay zeka kullanarak öğretti.",
-      logo: logo2,
+      logo: "/public/images/School_logos/logo7.png",
       images: [
         {
           src: e6_1, 
@@ -87,7 +88,7 @@ function App() {
       date: '27 Kasım 2024',
       image: e4_1,
       description: "Yeni etkinliğimizle projemizi okulumuzun sınırları dışına taşıyoruz. Fatih Sultan Mehmet İlkokulu'nu davet ettiğimiz etkinliğimizde deniz kirliliğine yapay zeka ile savaş açtık. Öğrencilerimiz, Fatih Sultan Mehmet İlkokulu öğrencilerine, deniz canlılarını, kirletici maddelerden nasıl ayıracağını eğlenceli bir oyunla yapay zeka kullanarak öğretti.",
-      logo: logo2,
+      logo: "/public/images/School_logos/logo7.png",
       images: [
         {
           src: e4_1, 
@@ -127,7 +128,7 @@ function App() {
       date: '11 Aralık 2024',
       image: e2_1,
       description: 'Bahçelievler Belediyesi tarafından Bahçelievler Kongre Merkezi’nde oluşturulan  Sıfır Atık Akademisi’nde öğrencilerimiz sıfır atık konusunda akademide görevli çevre mühendisi ve makine mühendisleri tarafından okyanus kirliliği ve yenilenebilir enerji konusunda bilgilendirildi.',
-      logo: logo2,
+      logo: "/public/images/School_logos/logo7.png",
       images: [
         {
           src: e2_1, 
@@ -167,7 +168,7 @@ function App() {
       date: '08 Ocak 2025',
       image: e3_1,
       description: "Yeni etkinliğimizde İstanbul Büyükşehir Belediyesi İSTAÇ Sütlüce Deniz Hizmetlerine bağlı Haliç tesisinde Haliç'in temizlenmesinde kullanılan makine ve cihazları görüp yetkililerden bilgi aldık. 13 temizlik  teknesinin görev yaptığı birimde günlük ortalama 20-30 m3 ( 2,5 – 3 ton ) atık denizden çıkarıldığını öğrendik. Çoğunlukla plastik atıkların toplandığını belirten görevliler vatandaşlarımızın denizlerimizi koruma adına daha duyarlı olması gerektiğini belirtti.",
-      logo: sch_2,
+      logo: "/public/images/School_logos/logo7.png",
       images: [
         {
           src: e3_1, 
@@ -207,7 +208,7 @@ function App() {
       date: '24 Şubat 2025',
       image: e5_1,
       description: "Yeni etkinliğimizde İstanbul Büyükşehir Belediyesi İSTAÇ Sütlüce Deniz Hizmetlerine bağlı Haliç tesisinde Haliç'in temizlenmesinde kullanılan makine ve cihazları görüp yetkililerden bilgi aldık. 13 temizlik  teknesinin görev yaptığı birimde günlük ortalama 20-30 m3 ( 2,5 – 3 ton ) atık denizden çıkarıldığını öğrendik. Çoğunlukla plastik atıkların toplandığını belirten görevliler vatandaşlarımızın denizlerimizi koruma adına daha duyarlı olması gerektiğini belirtti.",
-      logo: sch_2,
+      logo: "/public/images/School_logos/logo7.png",
       images: [
         {
           src: e5_1, 
@@ -247,7 +248,7 @@ function App() {
       date: '26 Şubat 2025',
       image: e1_1,
       description: 'Yeni etkinliğimizi Yıldız Teknik Üniversitesi Çevre Mühendisliği bölümünden araştırma  görevlisi Dr. Umut METİN ile yaptık. Deniz sularının içinde yaşayan mikroorganizmaları mikroskop ile görmeye çalıştık. Ayrıca Dr. Umut METİN bizlere denizlerdeki kirliliklerin nasıl meydana geldiğini anlattı.',
-      logo: sch_2,
+      logo: "/public/images/School_logos/logo7.png",
       images: [
         {
           src: e1_1, 
@@ -443,20 +444,32 @@ function App() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Hakkımızda</h2>
             <div className="prose max-w-none text-gray-600">
               <p className="text-xl mb-6">
-                AquaAlert, denizlerimizi korumak ve deniz kirliliğine karşı farkındalık yaratmak amacıyla kurulmuş bir girişimdir.
-                Projemiz, okyanus kirliliğini azaltmak ve deniz yaşamını korumak için çalışmaktadır.
+              Bahçelievler 15 Temmuz Şehitleri İmam Hatip Ortaokulu, sınavla öğrenci alan proje ortaokuludur. İlk senesinde yabancı hocaların desteğiyle Yoğunlaştırılmış İngilizce eğitimi vermektedir. 15 Temmuz Şehitleri AİHL ile aynı kampüs içerisinde olup ortak çalışmalar yürütmektedir. SHORE projesiyle öğrencilerine su okur yazarlığı öğretmeyi ve suyun önemini aşılamaya çalışmış olan okulumuz bu kapsamda 11 etkinlik yürütmüştür.
               </p>
-              <p className="text-lg mb-6">
-                Denizlerimizin karşı karşıya olduğu tehditler her geçen gün artmaktadır. Küresel ısınma, aşırı avlanma,
-                plastik kirliliği ve endüstriyel atıklar, deniz ekosistemlerini ciddi şekilde tehdit etmektedir.
-                Bu sorunlara karşı harekete geçmek ve çözüm üretmek için çalışıyoruz.
-              </p>
-              <p className="text-lg">
-                Bilimsel araştırmalar, eğitim programları ve topluluk katılımı yoluyla deniz kirliliğini azaltmak ve
-                deniz yaşamını korumak için sürdürülebilir çözümler geliştiriyoruz. Yerel topluluklar, sivil toplum
-                kuruluşları ve kamu kurumlarıyla işbirliği yaparak, denizlerimizin korunması için ortak çaba gösteriyoruz.
-              </p>
+              <div className="bg-white rounded-lg shadow-md p-6 sm:p-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-6">Okul Bilgileri</h3>
+            
+              <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 text-gray-600">
+                <MapPin className="flex-shrink-0" size={20} />
+                <span><a href="https://maps.app.goo.gl/exrtt3uk2Sif2trt6" target='_blank'>Yenibosna Merkez, Çobançeşme Kavşağı 1. Asena Sokak No:21, 34197 Bahçelievler/İstanbul</a></span>
+              </div>
+              <a href="mailto:info@aihl15temmuz.k12.tr" 
+                 className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 text-gray-600 hover:text-blue-600 transition">
+                <Mail className="flex-shrink-0" size={20} />
+                <span>info@aihl15temmuz.k12.tr</span>
+              </a>
+              
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 text-gray-600">
+                <Globe className="flex-shrink-0" size={20} />
+                <a href="https://aihl15temmuz.k12.tr/" target='_blank' className="text-gray-600 hover:text-blue-600 transition">
+                  https://aihl15temmuz.k12.tr/
+                </a>
+              </div>
             </div>
+            </div>
+
+          </div>
           </motion.div>
         </div>
       </section>
@@ -629,6 +642,24 @@ function App() {
               <Droplets className="h-8 w-8" />
               <span className="text-xl font-bold">AquaAlert</span>
             </button>
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 my-4 md:my-0">
+              <img 
+                src={shore_logo1} 
+                alt="Partner Logo 1" 
+                className="h-8 md:h-10 object-contain" 
+              />
+              <img 
+                src={europe} 
+                alt="Partner Logo 2" 
+                className="h-8 md:h-10 object-contain" 
+              />
+              <img 
+                src={europe2}
+                alt="Partner Logo 3" 
+                className="h-8 md:h-10  w-auto max-w-[440px] object-contain" 
+              />
+              
+            </div>
             <div className="text-center md:text-right">
               <p className="text-blue-200 text-sm">
                 &copy; {new Date().getFullYear()} AquaAlert. Tüm hakları saklıdır.
