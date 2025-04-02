@@ -293,7 +293,7 @@ function App() {
     { name: 'Bahçelievler Sıfır Atık Merkezi', logo: spon_logo4 }
   ];
 
-  if (location.pathname.startsWith('/event/')) {
+  if (window.location.pathname.startsWith('/event/')) {
     return <Routes>
       <Route path="/event/:eventId" element={<EventDetail events={events} />} />
     </Routes>;
